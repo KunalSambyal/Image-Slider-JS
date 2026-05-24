@@ -40,4 +40,8 @@ imageNavButtons.forEach((button) => {
     });
 });
 
-// document.addEventListener("DOMContentLoaded", intializeSlider);
+function initializeSlider() {
+    setInterval(nextImage, 4000);
+}
+
+document.addEventListener("DOMContentLoaded", initializeSlider);
