@@ -30,7 +30,7 @@ function prevImage() {
 }
 
 imageNavButtons.forEach((button) => {
-    button.addEventListener("click", (event) => {
+    document.addEventListener("click", (event) => {
         if (event.target.id === "rightImageButton") {
             nextImage();
         }
@@ -40,19 +40,17 @@ imageNavButtons.forEach((button) => {
     });
 });
 
-imageNavButtons.forEach((button) => {
-    button.addEventListener("keydown", (event) => {
-        if (event.key.startsWith("Arrow")) {
-            switch (event.key) {
-                case "ArrowRight":
-                    nextImage();
-                    break;
-                case "ArrowLeft":
-                    prevImage();
-                    break;
-            }
+document.addEventListener("keydown", (event) => {
+    if (event.key.startsWith("Arrow")) {
+        switch (event.key) {
+            case "ArrowRight":
+                nextImage();
+                break;
+            case "ArrowLeft":
+                prevImage();
+                break;
         }
-    });
+    }
 });
 
 function initializeSlider() {
