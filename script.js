@@ -40,6 +40,21 @@ imageNavButtons.forEach((button) => {
     });
 });
 
+imageNavButtons.forEach((button) => {
+    button.addEventListener("keydown", (event) => {
+        if (event.key.startsWith("Arrow")) {
+            switch (event.key) {
+                case "ArrowRight":
+                    nextImage();
+                    break;
+                case "ArrowLeft":
+                    prevImage();
+                    break;
+            }
+        }
+    });
+});
+
 function initializeSlider() {
     setInterval(nextImage, 4000);
 }
