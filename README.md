@@ -32,9 +32,9 @@ A simple Image Slider built using HTML, CSS, and JavaScript.
 
 ## Future Improvements
 
-- Auto-play slideshow
+- Auto-play slideshow -- Done✅
 - Smooth image transitions
-- Keyboard navigation
+- Keyboard navigation -- Done✅
 - Touch/swipe support
 
 ## Author
