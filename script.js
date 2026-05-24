@@ -4,7 +4,11 @@ const imageNavButtons = document.querySelectorAll(".imageNavButtons");
 let currentIndex = 0;
 
 function changeImage(path) {
-    imageTag.src = `/${path}`;
+    imageTag.classList.add("fade");
+    setTimeout(() => {
+        imageTag.src = `/${path}`;
+        imageTag.classList.remove("fade");
+    }, 300);
 }
 
 function checkForIndex(indexToCheck) {
